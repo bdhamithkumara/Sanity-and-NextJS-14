@@ -34,7 +34,7 @@ export default function Home() {
     const fetchImages = async () => {
 
       try {
-        const responseImage = await client.fetch(groq`*[_type == "images"]{
+        const responseImage = await client.fetch(groq`*[_type == "imagesupload"]{
           title,mainImage
         }`)
 
@@ -72,7 +72,6 @@ export default function Home() {
             src={urlFor(image.mainImage.asset._ref).width(200).height(300).url()}
           />
         </div>
-        <p className="text-gray-600">{image.excerpt}</p>
       </div>
     ))}
   </div>
