@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react'
 import groq from 'groq'
 import imageUrlBuilder from "@sanity/image-url";
 import { useNextSanityImage } from 'next-sanity-image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 
 const builder = imageUrlBuilder(client);
 
@@ -14,8 +17,14 @@ function urlFor(source) {
 
 export default function Home() {
 
+    const router = useRouter();
+
   const [posts, setPost] = useState([]);
   const [images, setImages] = useState([]);
+
+  const handleInput = () => {
+    router.push("/blog");
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,12 +43,12 @@ export default function Home() {
     const fetchImages = async () => {
 
       try {
-        const responseImage = await client.fetch(groq`*[_type == "imagesupload"]{
+        const responseImage = await client.fetch(groq`*[_type == "images"]{
           title,mainImage
         }`)
 
         setImages(responseImage);
-        console.log(responseImage)
+        console.log(responseImage);
       } catch (error) {
         console.error(error);
       }
@@ -55,7 +64,14 @@ export default function Home() {
 
   return (
     <div >
-
+    <div>
+      This for blog 
+      <div className='m-4'>
+        <div>
+          <button onClick={handleInput} className='bg-red-600 p-4'>see thw blog</button>
+        </div>
+      </div>
+    </div>
     <div className="container mx-auto mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
     {images.map((image, id) => (
       <div key={id} className="bg-white p-4 rounded shadow-md">
