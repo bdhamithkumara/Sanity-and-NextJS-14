@@ -9,7 +9,7 @@ import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
-import { ImageFor } from '../../../public/8.jpg'
+import  ImageFor  from '../../../public/8.jpg'
 
 
 const builder = imageUrlBuilder(client);
