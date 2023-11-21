@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
-import { NextSeo } from 'next-seo';
+import { DefaultSeo } from 'next-seo';
 
 const builder = imageUrlBuilder(client);
 
@@ -112,33 +112,19 @@ const SinglePage = () => {
 
   return (
     <>
-      <NextSeo
-        openGraph={{
-          title: 'Open Graph Article Title',
-          description: 'Description of open graph article',
-          url: 'https://sanity-and-next-js-14.vercel.app/',
-          type: 'article',
-          article: {
-            publishedTime: '2017-06-21T23:04:13Z',
-            modifiedTime: '2018-01-21T18:04:43Z',
-            expirationTime: '2022-12-21T22:04:11Z',
-            section: 'Section II',
-            authors: [
-              'https://www.example.com/authors/@firstnameA-lastnameA',
-              'https://www.example.com/authors/@firstnameB-lastnameB',
-            ],
-            tags: ['Tag A', 'Tag B', 'Tag C'],
-          },
-          images: [
-            {
-              url: 'https://wallpapers.com/images/high/sage-naruto-cell-phone-art-gbjepana241apniy.webp',
-              width: 850,
-              height: 650,
-              alt: 'Photo of text',
-            },
-          ],
-        }}
-      />
+    <DefaultSeo
+    openGraph={{
+      type: 'website',
+      locale: 'en_IE',
+      url: 'https://sanity-and-next-js-14.vercel.app/',
+      siteName: 'abc',
+    }}
+    twitter={{
+      handle: '@handle',
+      site: '@site',
+      cardType: 'summary_large_image',
+    }}
+  />
       <p>Article ----</p>
       {isLoading ? (
         <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
