@@ -136,7 +136,7 @@ const SinglePage = () => {
     />
       {isLoading ? (
         <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
-          Loading...
+          Loading... !
         </h1>
       ) : (
         <section className="px-5 xl:max-w-6xl xl:mx-auto pb-20">
