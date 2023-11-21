@@ -9,6 +9,8 @@ import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
+import { ImageFor } from '../../../public/8.jpg'
+
 
 const builder = imageUrlBuilder(client);
 
@@ -117,12 +119,11 @@ const SinglePage = () => {
 
       <Helmet>
         <title>{singlePost.title}</title>
-
         <meta name="description" content="This is a page description." />
         <meta name="keywords" content="Next.js, React, SEO" />
         <meta property="og:title" content="My Page Title for Open Graph" />
         <meta property="og:description" content="This is a page description for Open Graph." />
-        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqt44gk44%2Fproduction%2Fd701df70b9cfd98309f87bd1ab3b3a33f260fd47-1125x1065.jpg%3Frect%3D208%2C0%2C710%2C1065%26w%3D200%26h%3D300&w=256&q=75" />
+        <meta property="og:image" content={ImageFor} />
         <meta name="application-name" content="Next.js" />
         <meta name="author" content="Seb" />
         <link rel="author" href="https://nextjs.org" />
@@ -138,6 +139,16 @@ const SinglePage = () => {
         <link rel="alternate" hreflang="en-US" href="https://acme.com/en-US" />
         <link rel="alternate" hreflang="de-DE" href="https://acme.com/de-DE" />
         <meta property="og:image" content="https://acme.com/og-image.png" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="sample title by damith" />
+        <meta property="og:description" content="sample description by damith" />
+        <meta property="og:image" content={ImageFor} />
+
+        <meta name="twitter:title" content="twiiter title" />
+        <meta name="twitter:description" content="twitter descrption" />
+        <meta name="twitter:image" content={ImageFor} />
+
       </Helmet>
 
       <p>Simple Usage</p>
