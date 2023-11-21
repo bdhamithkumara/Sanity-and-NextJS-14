@@ -145,9 +145,10 @@ const SinglePage = () => {
         <meta property="og:description" content="sample description by damith" />
         <meta property="og:image" content="https://i.postimg.cc/90Ytr3B7/8.jpg" />
 
-        <meta name="twitter:title" content="twiiter title" />
-        <meta name="twitter:description" content="twitter descrption" />
-        <meta name="twitter:image" content="https://i.postimg.cc/90Ytr3B7/8.jpg" />
+        <meta name="twitter:card" content="https://i.postimg.cc/90Ytr3B7/8.jpg"/>
+        <meta name="twitter:image:alt" content="PSGC API Banner"/>
+        <meta name="twitter:title" content="Philippine Standard Geographic Code API"/>
+        <meta name="twitter:description" content="API used for listing all the region, province, city, municipality, barangay, and its data. Philippine Standard Geographic Codes (PSGC) data came from Philippine Statistics Authority."/>
 
       </Helmet>
 
