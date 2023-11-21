@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText , toPlainText } from '@portabletext/react'
+import { NextSeo } from 'next-seo';
 
 const builder = imageUrlBuilder(client);
 
@@ -111,6 +112,28 @@ const SinglePage = () => {
 
   return (
     <>
+    <NextSeo
+      openGraph={{
+        type: 'website',
+        url: 'https://www.example.com/page',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fimage&psig=AOvVaw0LMpe4Z9E_Z1lRZOxpKtMl&ust=1700644562635000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCNiKkOfg1IIDFQAAAAAdAAAAABAE',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          },
+          {
+            url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fimage&psig=AOvVaw0LMpe4Z9E_Z1lRZOxpKtMl&ust=1700644562635000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCNiKkOfg1IIDFQAAAAAdAAAAABAE',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt 2',
+          },
+        ],
+      }}
+    />
       {isLoading ? (
         <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
           Loading...
