@@ -5,9 +5,7 @@ import groq from 'groq';
 import imageUrlBuilder from "@sanity/image-url";
 import Image from 'next/image';
 import Link from 'next/link';
-
-
-
+import { ArticleJsonLd } from 'next-seo';
 
 const builder = imageUrlBuilder(client);
 

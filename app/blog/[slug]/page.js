@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
-import { NextSeo } from 'next-seo';
+import { Helmet } from 'react-helmet';
 
 const builder = imageUrlBuilder(client);
 
@@ -42,7 +42,7 @@ const SinglePage = () => {
       }
     };
     fetchData();
-    console.log(singlePost.images);
+    //console.log(singlePost.images);
   }, [slug])
 
   const myPortableTextComponents = {
@@ -109,13 +109,22 @@ const SinglePage = () => {
       checkmarks: ({ children }) => <ol className="m-auto text-lg">{children}</ol>,
     },
   }
+  console.log(singlePost.title)
 
+  
   return (
     <>
-    <NextSeo
-    title="Home Page Title"
-    description="Home page description of the page"
-/>
+
+    <Helmet>
+    <title>My Page Title</title>
+
+    <meta name="description" content="This is a page description." />
+    <meta name="keywords" content="Next.js, React, SEO" />
+    <meta property="og:title" content="My Page Title for Open Graph" />
+    <meta property="og:description" content="This is a page description for Open Graph." />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+  </Helmet>
+
 <p>Simple Usage</p>
       {isLoading ? (
         <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
@@ -158,3 +167,4 @@ const SinglePage = () => {
 }
 
 export default SinglePage
+
