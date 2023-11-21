@@ -116,13 +116,13 @@ const SinglePage = () => {
     <>
 
     <Helmet>
-    <title>My Page Title</title>
+    <title>{singlePost.title}</title>
 
     <meta name="description" content="This is a page description." />
     <meta name="keywords" content="Next.js, React, SEO" />
     <meta property="og:title" content="My Page Title for Open Graph" />
     <meta property="og:description" content="This is a page description for Open Graph." />
-    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqt44gk44%2Fproduction%2Fd701df70b9cfd98309f87bd1ab3b3a33f260fd47-1125x1065.jpg%3Frect%3D208%2C0%2C710%2C1065%26w%3D200%26h%3D300&w=256&q=75" />
   </Helmet>
 
 <p>Simple Usage</p>
