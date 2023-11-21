@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
-import { DefaultSeo } from 'next-seo';
+import { NextSeo } from 'next-seo';
 
 const builder = imageUrlBuilder(client);
 
@@ -112,20 +112,11 @@ const SinglePage = () => {
 
   return (
     <>
-    <DefaultSeo
-    openGraph={{
-      type: 'website',
-      locale: 'en_IE',
-      url: 'https://sanity-and-next-js-14.vercel.app/',
-      siteName: 'abc',
-    }}
-    twitter={{
-      handle: '@handle',
-      site: '@site',
-      cardType: 'summary_large_image',
-    }}
-  />
-      <p>Article ----</p>
+    <NextSeo
+    title="Home Page Title"
+    description="Home page description of the page"
+/>
+<p>Simple Usage</p>
       {isLoading ? (
         <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
           Loading... !
