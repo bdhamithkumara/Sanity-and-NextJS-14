@@ -9,7 +9,7 @@ import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
-import  ImageFor  from '../../../public/8.jpg'
+
 
 
 const builder = imageUrlBuilder(client);
@@ -123,7 +123,7 @@ const SinglePage = () => {
         <meta name="keywords" content="Next.js, React, SEO" />
         <meta property="og:title" content="My Page Title for Open Graph" />
         <meta property="og:description" content="This is a page description for Open Graph." />
-        <meta property="og:image" content={ImageFor} />
+        <meta property="og:image" content="https://i.postimg.cc/90Ytr3B7/8.jpg"/>
         <meta name="application-name" content="Next.js" />
         <meta name="author" content="Seb" />
         <link rel="author" href="https://nextjs.org" />
@@ -143,11 +143,11 @@ const SinglePage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="sample title by damith" />
         <meta property="og:description" content="sample description by damith" />
-        <meta property="og:image" content={ImageFor} />
+        <meta property="og:image" content="https://i.postimg.cc/90Ytr3B7/8.jpg" />
 
         <meta name="twitter:title" content="twiiter title" />
         <meta name="twitter:description" content="twitter descrption" />
-        <meta name="twitter:image" content={ImageFor} />
+        <meta name="twitter:image" content="https://i.postimg.cc/90Ytr3B7/8.jpg" />
 
       </Helmet>
 
