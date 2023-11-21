@@ -111,21 +111,36 @@ const SinglePage = () => {
   }
   console.log(singlePost.title)
 
-  
+
   return (
     <>
 
-    <Helmet>
-    <title>{singlePost.title}</title>
+      <Helmet>
+        <title>{singlePost.title}</title>
 
-    <meta name="description" content="This is a page description." />
-    <meta name="keywords" content="Next.js, React, SEO" />
-    <meta property="og:title" content="My Page Title for Open Graph" />
-    <meta property="og:description" content="This is a page description for Open Graph." />
-    <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqt44gk44%2Fproduction%2Fd701df70b9cfd98309f87bd1ab3b3a33f260fd47-1125x1065.jpg%3Frect%3D208%2C0%2C710%2C1065%26w%3D200%26h%3D300&w=256&q=75" />
-  </Helmet>
+        <meta name="description" content="This is a page description." />
+        <meta name="keywords" content="Next.js, React, SEO" />
+        <meta property="og:title" content="My Page Title for Open Graph" />
+        <meta property="og:description" content="This is a page description for Open Graph." />
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqt44gk44%2Fproduction%2Fd701df70b9cfd98309f87bd1ab3b3a33f260fd47-1125x1065.jpg%3Frect%3D208%2C0%2C710%2C1065%26w%3D200%26h%3D300&w=256&q=75" />
+        <meta name="application-name" content="Next.js" />
+        <meta name="author" content="Seb" />
+        <link rel="author" href="https://nextjs.org" />
+        <meta name="author" content="Josh" />
+        <meta name="generator" content="Next.js" />
+        <meta name="keywords" content="Next.js,React,JavaScript" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="creator" content="Jiachi Liu" />
+        <meta name="publisher" content="Sebastian Markbåge" />
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
+        <link rel="canonical" href="https://acme.com" />
+        <link rel="alternate" hreflang="en-US" href="https://acme.com/en-US" />
+        <link rel="alternate" hreflang="de-DE" href="https://acme.com/de-DE" />
+        <meta property="og:image" content="https://acme.com/og-image.png" />
+      </Helmet>
 
-<p>Simple Usage</p>
+      <p>Simple Usage</p>
       {isLoading ? (
         <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
           Loading... !
