@@ -10,8 +10,6 @@ import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
 
-
-
 const builder = imageUrlBuilder(client);
 
 function urlFor(source) {
