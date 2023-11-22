@@ -11,6 +11,8 @@ import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
 import { useSearchParams } from 'next/navigation'
 
+
+
 const builder = imageUrlBuilder(client);
 
 function urlFor(source) {
@@ -21,6 +23,8 @@ function urlFor(source) {
 
 
 const SinglePage = () => {
+
+
 
   const { slug } = useParams()
   const [singlePost, setSinglePost] = useState([])
@@ -119,14 +123,11 @@ const SinglePage = () => {
   }
   console.log(title)
 
-
-
   return (
     <>
 
       <Helmet>
         <title>{singlePost.title}</title>
-        <meta name="description" content="This is a page description." />
         <meta name="keywords" content="Next.js, React, SEO" />
         <meta property="og:title" content="My Page Title for Open Graph" />
         <meta property="og:description" content="This is a page description for Open Graph." />
