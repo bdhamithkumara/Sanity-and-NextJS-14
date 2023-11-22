@@ -10,7 +10,7 @@ import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
 import { useSearchParams } from 'next/navigation'
-import Head from 'next/head';
+
 
 
 const builder = imageUrlBuilder(client);
@@ -126,38 +126,39 @@ const SinglePage = () => {
   return (
     <>
 
-    <Head>
-    <title key="title">{singlePost.title}</title>
-    <meta key="og:title" property="og:title" content={title} />
-    <meta key="og:description" property="og:description" name="description" content="This is a page description" />
-    <meta key="og:image"a property="og:image" content="https://sanity-and-next-js-14.vercel.app/og"/>
-    <meta name="application-name" content="Next.js" />
-    <meta name="author" content="Seb" />
-    <link rel="author" href="https://nextjs.org" />
-    <meta name="author" content="Josh" />
-    <meta name="generator" content="Next.js" />
-    <meta name="keywords" content="Next.js,React,JavaScript" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="creator" content="Jiachi Liu" />
-    <meta name="publisher" content="Sebastian Markbåge" />
-    <meta name="format-detection" content="telephone=no, address=no, email=no" />
-    <link rel="canonical" href="https://acme.com" />
-    <link rel="alternate" hreflang="en-US" href="https://acme.com/en-US" />
-    <link rel="alternate" hreflang="de-DE" href="https://acme.com/de-DE" />
-    <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og" />
+      <Helmet>
+        <title>{singlePost.title}</title>
+        <meta name="keywords" content="Next.js, React, SEO" />
+        <meta property="og:title" content="My Page Title for Open Graph" />
+        <meta property="og:description" content="This is a page description for Open Graph." />
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og"/>
+        <meta name="application-name" content="Next.js" />
+        <meta name="author" content="Seb" />
+        <link rel="author" href="https://nextjs.org" />
+        <meta name="author" content="Josh" />
+        <meta name="generator" content="Next.js" />
+        <meta name="keywords" content="Next.js,React,JavaScript" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="creator" content="Jiachi Liu" />
+        <meta name="publisher" content="Sebastian Markbåge" />
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
+        <link rel="canonical" href="https://acme.com" />
+        <link rel="alternate" hreflang="en-US" href="https://acme.com/en-US" />
+        <link rel="alternate" hreflang="de-DE" href="https://acme.com/de-DE" />
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="sample title by damith" />
-    <meta property="og:description" content="sample description by damith" />
-    <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="sample title by damith" />
+        <meta property="og:description" content="sample description by damith" />
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og" />
 
-    <meta name="twitter:card" content="https://sanity-and-next-js-14.vercel.app/og" />
-    <meta name="twitter:image:alt" content="PSGC API Banner"/>
-    <meta name="twitter:title" content="Philippine Standard Geographic Code API"/>
-    <meta name="twitter:description" content="API used for listing all the region, province, city, municipality, barangay, and its data. Philippine Standard Geographic Codes (PSGC) data came from Philippine Statistics Authority."/>
+        <meta name="twitter:card" content="https://sanity-and-next-js-14.vercel.app/og" />
+        <meta name="twitter:image:alt" content="PSGC API Banner"/>
+        <meta name="twitter:title" content="Philippine Standard Geographic Code API"/>
+        <meta name="twitter:description" content="API used for listing all the region, province, city, municipality, barangay, and its data. Philippine Standard Geographic Codes (PSGC) data came from Philippine Statistics Authority."/>
 
-    </Head>
+      </Helmet>
 
       <p>Simple Usage</p>
       {isLoading ? (
