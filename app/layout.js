@@ -6,10 +6,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 export const metadata = {
-  title: 'sample',
-  description: 'samplee',
   openGraph: {
-    images: 'https://sanity-and-next-js-14.vercel.app/og',
+    images: `https://sanity-and-next-js-14.vercel.app/og`,
   },
 }
  

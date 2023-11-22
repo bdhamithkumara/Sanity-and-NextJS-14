@@ -9,6 +9,7 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
   const title = searchParams.get('title')|| 'MyBlog';
 
+ console.log(title)
  
   return new ImageResponse(
     (
