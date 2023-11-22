@@ -9,7 +9,7 @@ import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
-export {default as avatar} from '../../assets/8.jpg';
+
 
 
 const builder = imageUrlBuilder(client);
