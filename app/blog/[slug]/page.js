@@ -9,7 +9,7 @@ import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
-import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation'
 
 const builder = imageUrlBuilder(client);
 
@@ -18,13 +18,18 @@ function urlFor(source) {
   return builder.image(source)
 }
 
+
+
 const SinglePage = () => {
-  const router = useRouter();
+
   const { slug } = useParams()
   const [singlePost, setSinglePost] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  const title  = router.query;
+  const searchParams = useSearchParams()
+ 
+  const title = searchParams.get('title')
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -112,7 +117,9 @@ const SinglePage = () => {
       checkmarks: ({ children }) => <ol className="m-auto text-lg">{children}</ol>,
     },
   }
-  console.log(singlePost.title)
+  console.log(title)
+
+
 
   return (
     <>
@@ -189,7 +196,7 @@ const SinglePage = () => {
           </button>
           <div>
           <br/>
-          The Search Keyword {title}
+          url paramter - {title}
         </div>
         </section>
       )}

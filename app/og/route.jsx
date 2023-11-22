@@ -7,7 +7,7 @@ export const runtime = 'edge';
 export async function GET(request) {
   
     const { searchParams } = new URL(request.url);
-  const title = searchParams.get('title');
+  const title = searchParams.get('title')|| 'MyBlog';
 
  
   return new ImageResponse(
