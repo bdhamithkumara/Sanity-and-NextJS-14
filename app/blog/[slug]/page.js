@@ -24,7 +24,7 @@ const SinglePage = () => {
   const [singlePost, setSinglePost] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  const keyword  = router.query;
+  const title  = router.query;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -113,7 +113,6 @@ const SinglePage = () => {
     },
   }
   console.log(singlePost.title)
-  const imageUrl = "https://i.postimg.cc/90Ytr3B7/8.jpg";
 
   return (
     <>
@@ -190,7 +189,7 @@ const SinglePage = () => {
           </button>
           <div>
           <br/>
-          The Search Keyword {keyword}
+          The Search Keyword {title}
         </div>
         </section>
       )}
