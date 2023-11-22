@@ -4,16 +4,11 @@ import { ImageResponse } from 'next/og';
  
 export const runtime = 'edge';
  
-export async function GET() {
+export async function GET(request) {
   
-   // const { searchParams } = new URL(request.url);
-  //const username = searchParams.get('username');
- // if (!username) {
-  //  return new ImageResponse(<>Visit with &quot;?username=vercel&quot;</>, {
-  //    width: 1200,
- //     height: 630,
- //   });
- // }
+    const { searchParams } = new URL(request.url);
+  const title = searchParams.get('title');
+
  
   return new ImageResponse(
     (
@@ -62,6 +57,7 @@ export async function GET() {
         >
           Ship
         </div>
+        <p>{title}</p>
       </div>
         
     ),

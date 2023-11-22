@@ -9,6 +9,7 @@ import Link from 'next/link';
 import BlockContent from "@sanity/block-content-to-react"
 import { PortableText, toPlainText } from '@portabletext/react'
 import { Helmet } from 'react-helmet';
+import { useRouter } from 'next/navigation';
 
 const builder = imageUrlBuilder(client);
 
@@ -18,10 +19,12 @@ function urlFor(source) {
 }
 
 const SinglePage = () => {
+  const router = useRouter();
   const { slug } = useParams()
   const [singlePost, setSinglePost] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  const keyword  = router.query;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -185,6 +188,10 @@ const SinglePage = () => {
               Read more articles
             </Link>
           </button>
+          <div>
+          <br/>
+          The Search Keyword {keyword}
+        </div>
         </section>
       )}
     </>

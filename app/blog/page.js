@@ -49,7 +49,8 @@ const Blog = () => {
                         <h4 className="text-xl mt-2">{post.title}</h4>
                         <button className="mt-5 mb-10">
                             <Link
-                                href={`/blog/`} as={`/blog/${post.slug.current}`}
+                            href={`/blog/`} 
+                            as={`/blog/${post.slug.current}?title=${post.title}`}
                                 className="py-2 px-6 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black transition-all duration-500 hover:text-black font-bold"
                             >
                                 Read Full Article
