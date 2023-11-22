@@ -124,7 +124,7 @@ const SinglePage = () => {
         <meta name="keywords" content="Next.js, React, SEO" />
         <meta property="og:title" content="My Page Title for Open Graph" />
         <meta property="og:description" content="This is a page description for Open Graph." />
-        <meta property="og:image" content="https://i.postimg.cc/90Ytr3B7/8.jpg"/>
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og"/>
         <meta name="application-name" content="Next.js" />
         <meta name="author" content="Seb" />
         <link rel="author" href="https://nextjs.org" />
@@ -139,14 +139,14 @@ const SinglePage = () => {
         <link rel="canonical" href="https://acme.com" />
         <link rel="alternate" hreflang="en-US" href="https://acme.com/en-US" />
         <link rel="alternate" hreflang="de-DE" href="https://acme.com/de-DE" />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og" />
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content="sample title by damith" />
         <meta property="og:description" content="sample description by damith" />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og" />
 
-        <meta name="twitter:card" content={imageUrl} />
+        <meta name="twitter:card" content="https://sanity-and-next-js-14.vercel.app/og" />
         <meta name="twitter:image:alt" content="PSGC API Banner"/>
         <meta name="twitter:title" content="Philippine Standard Geographic Code API"/>
         <meta name="twitter:description" content="API used for listing all the region, province, city, municipality, barangay, and its data. Philippine Standard Geographic Codes (PSGC) data came from Philippine Statistics Authority."/>
