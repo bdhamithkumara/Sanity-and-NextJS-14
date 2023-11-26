@@ -167,9 +167,8 @@ const SinglePage = () => {
         </h1>
       ) : (
         <section className="px-5 xl:max-w-6xl xl:mx-auto pb-20">
-          <h1 className="uppercase font-bold text-4xl tracking-wide mb-10 md:text-6xl lg:text-8xl text-center mt-5">
-            {singlePost.title}
-          </h1>
+         
+          <h5 class="text-base font-bold">{singlePost.title}</h5>
           {singlePost.coverImage && singlePost.coverImage.asset && (
             <Image
               width={200}
