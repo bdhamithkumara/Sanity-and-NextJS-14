@@ -28,7 +28,7 @@ const SinglePage = () => {
 
   const { slug } = useParams()
   const [singlePost, setSinglePost] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
+  //const [isLoading, setIsLoading] = useState(true)
 
 
 
@@ -45,7 +45,7 @@ const SinglePage = () => {
               {'_ref':asset._ref}
         }`)
         setSinglePost(response[0]);
-        setIsLoading(false)
+        //setIsLoading(false)
         console.log(response)
       } catch (error) {
         console.error(error);
@@ -159,11 +159,7 @@ const SinglePage = () => {
 
       <MyPage/>
       <p>Simple Usage</p>
-      {isLoading ? (
-        <h1 className="uppercase font-bold text-4xl tracking-wide mb-5 md:text-6xl lg:text-8xl flex items-center justify-center h-screen">
-          Loading... !
-        </h1>
-      ) : (
+      
         <section className="px-5 xl:max-w-6xl xl:mx-auto pb-20">
           <h1 className="uppercase font-bold text-4xl tracking-wide mb-10 md:text-6xl lg:text-8xl text-center mt-5">
             {singlePost.title}
@@ -199,7 +195,7 @@ const SinglePage = () => {
           
         </div>
         </section>
-      )}
+
     </>
   )
 }
