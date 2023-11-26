@@ -72,8 +72,8 @@ const SinglePage = () => {
       h2: ({ children }) => <h2 className="text-2xl font-bold">{children}</h2>,
       h3: ({ children }) => <h3 className="text-xl font-bold">{children}</h3>,
       h4: ({ children }) => <h4 className="text-lg font-bold">{children}</h4>,
-      h5: ({ children }) => <h5 className="text-base font-bold">{children}</h5>,
-      h6: ({ children }) => <h6 className="text-sm font-bold">{children}</h6>,
+      h5: ({ children }) => <h5 className="text-sm font-bold">{children}</h5>,
+      h6: ({ children }) => <h6 className="text-xs font-bold">{children}</h6>,
       p: ({ children }) => <p className="text-base">{children}</p>,
       blockquote: ({ children }) => (
         <blockquote className="border-l-4 border-gray-300 p-4">
@@ -167,8 +167,10 @@ const SinglePage = () => {
         </h1>
       ) : (
         <section className="px-5 xl:max-w-6xl xl:mx-auto pb-20">
-         
-          <h5 class="text-base font-bold">{singlePost.title}</h5>
+          <h1 className="uppercase font-bold text-4xl tracking-wide mb-10 md:text-6xl lg:text-8xl text-center mt-5">
+            {singlePost.title}
+          </h1>
+          
           {singlePost.coverImage && singlePost.coverImage.asset && (
             <Image
               width={200}
