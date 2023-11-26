@@ -127,6 +127,7 @@ const SinglePage = () => {
     <Helmet>
     <title>{singlePost.title}</title>
     <meta name="keywords" content="Next.js, React, SEO" />
+    <meta name="description" content="Put your description here."></meta>
     <meta property="og:title" content="My Page Title for Open Graph" />
     <meta property="og:description" content="This is a page description for Open Graph." />
     <meta property="og:image" content="https://sanity-and-next-js-14.vercel.app/og"/>
