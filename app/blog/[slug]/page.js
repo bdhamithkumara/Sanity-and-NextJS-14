@@ -65,6 +65,7 @@ const SinglePage = () => {
           data-nimg="1"
           src={urlFor(value.asset._ref).width(200).height(300).url()}
           alt='image2'
+          loading="lazy"
         />,
     },
     block: {
@@ -171,6 +172,7 @@ const SinglePage = () => {
               height={200}
               src={urlFor(singlePost.coverImage.asset._ref).width(200).height(300).url()}
               alt='image'
+              loading="lazy"
             />
           )}
 
